@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/3.0.6/dc.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/3.0.6/dc.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="container">
+      <br><br>
+      <div class="row">
+        <div id="row_org" class="col-lg-10 text-center"><p>Organizations</p></div>
+        <div class="col-lg-2 text-center">
+          <a class="reset btn btn-danger" href="javascript:dc.filterAll();dc.redrawAll();">Reset</a>
+        </div>
+      </div>
+      <br><br>
+      <div class="row">
+        <div id="area_date" class="col-lg-6 text-center"><p>Date Founded</p></div>
+        <div id="dough_type" class="col-lg-6 text-center"><p>Organization Type</p></div>
+      </div>
+      <br><br>
+      <div class="row">
+
+        <div id="dough_lang" class="col-lg-6 text-center"><p>Languages</p></div>
+      </div>
+      <br><br>
+      <div class="row">
+        <div id="row_page" class="col-lg-6 text-center"><p>Number of pages in a publication</p></div>
+        <div id="dough_freq" class="col-lg-6 text-center"><p>Frequency of publication</p></div>
+      </div>
+      <br><br>
+      <div class="row">
+        <div id="bar_staff" class="col-lg-6 text-center"><p>Number of staffs in the organization</p></div>
+        <!-- <div id="dough_freq" class="col-lg-6 text-center"><p>Frequency of publication.</p></div> -->
+      </div>
+    </div>
+    <script src="scripts/main.js" charset="utf-8"></script>
+  </body>
+</html>
