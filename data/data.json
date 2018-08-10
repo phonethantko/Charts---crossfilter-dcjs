@@ -1,218 +1,35 @@
 [
   {
     "name": "The Hakha Post",
-    "Count": "10 to 25"
+    "date": "2012-01",
+    "type": "Private",
+    "numStaff": 24,
+    "lang": "Hakha",
+    "freq": "5 times a week",
+    "page": 4,
+    "platform": "Online, Video, Print",
+    "other_media": "Video, Print"
   },
   {
-    "Name": "Myitkyina News Journal",
-    "Count": "10 to 25"
+    "name": "Myitkyina News Journal",
+    "date": "2014-03",
+    "type": "Private",
+    "numStaff": 23,
+    "lang": "Myanmar",
+    "freq": "Weekly",
+    "page": 20,
+    "platform": "Online, Video, Print, Audio",
+    "other_media": "Video, Print, Audio"
   },
   {
-    "Name": "Mon News Agency",
-    "Count": "10 to 25"
-  },
-  {
-    "Name": "The Matupi Times",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "The Voice of Shanni",
-    "Count": "10 to 25"
-  },
-  {
-    "Name": "The Chin Voice",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Than Lwin Times",
-    "Count": "Fewer than 5"
-  },
-  {
-    "Name": "The Marnagar Journal",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Chin World",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "The Chinland Post",
-    "Count": "10 to 25"
-  },
-  {
-    "Name": "The People's Voice",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Hsenpai News Journal",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Hinthar Media",
-    "Count": "10 to 25"
-  },
-  {
-    "Name": "Tachileik News Agency",
-    "Count": "10 to 25"
-  },
-  {
-    "Name": "Narinjara News",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Kantarawaddy Times",
-    "Count": "10 to 25"
-  },
-  {
-    "Name": "Dawei Watch Media",
-    "Count": "10 to 25"
-  },
-  {
-    "Name": "Karen Information Center",
-    "Count": "25 to 50"
-  },
-  {
-    "Name": "Development Media Group",
-    "Count": "10 to 25"
-  },
-  {
-    "Name": "Khonumthung  News Group",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Zomi Post Media",
-    "Count": "10 to 20"
-  },
-  {
-    "Name": "Mandalay Khit",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Network Media Group",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Thazin Pan Khine News Journal",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Magway Journal",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Thanlwin Thwe Chin",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Amart Dein Journal",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Shan Herald Agency for News",
-    "Count": "25 to 50"
-  },
-  {
-    "Name": "Myeik News Agency",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Asia Heart News",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Myaylat Journal",
-    "Count": "10 to 25"
-  },
-  {
-    "Name": "Friday Times News Journal",
-    "Count": "10 to 25"
-  },
-  {
-    "Name": "Root Investigative Agency",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Hantharwadi Times",
-    "Count": "10 to 25"
-  },
-  {
-    "Name": "MGY Journal",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Kanbawza Tai News Journal",
-    "Count": "10 to 25"
-  },
-  {
-    "Name": "Monywa Gazette Weekly Journal",
-    "Count": "10 to 25"
-  },
-  {
-    "Name": "Bago Weekly Journal",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Shwe Mandalay News Journal",
-    "Count": "Fewer than 5"
-  },
-  {
-    "Name": "Khumi Media Group",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Kachin News Group",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Zoleng The",
-    "Count": "10 to 25"
-  },
-  {
-    "Name": "Chinland Herald",
-    "Count": "10 to 25"
-  },
-  {
-    "Name": "Lairawn Post",
-    "Count": "10 to 25"
-  },
-  {
-    "Name": "K-CHO Post",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Kachin Waves",
-    "Count": "Fewer than 5"
-  },
-  {
-    "Name": "The Kachin Times",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Zomi Times",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Tedim Times",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Zingsol",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "Chin Lung Today",
-    "Count": "Fewer than 5"
-  },
-  {
-    "Name": "Central News Myanmar",
-    "Count": "5 to 10"
-  },
-  {
-    "Name": "The Golden Gong -Shwe Moung Journal",
-    "Count": "10 to 15"
-  },
-  {
-    "Name": "Golden Triangle Regional News",
-    "Count": "10 to 25"
+    "name": "Mon News Agency",
+    "date": "2000-12",
+    "type": "Non-profit",
+    "numStaff": 20,
+    "lang": "Myanmar, English, Mon",
+    "freq": "Weekly",
+    "page": 20,
+    "platform": "Online, Video, Print, Audio",
+    "other_media": "Video, Print, Audio, Online Text"
   }
 ]
