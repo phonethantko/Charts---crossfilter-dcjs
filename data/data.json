@@ -8,7 +8,10 @@
     "freq": "5 times a week",
     "page": 4,
     "platform": "Online, Video, Print",
-    "other_media": "Video, Print"
+    "other_media": "Video, Print",
+    "audience": 4500,
+    "online_ad": "Yes",
+    "print_ad": "Yes"
   },
   {
     "name": "Myitkyina News Journal",
@@ -19,7 +22,10 @@
     "freq": "Weekly",
     "page": 20,
     "platform": "Online, Video, Print, Audio",
-    "other_media": "Video, Print, Audio"
+    "other_media": "Video, Print, Audio",
+    "audience": 12000,
+    "online_ad": "Yes",
+    "print_ad": "Yes"
   },
   {
     "name": "Mon News Agency",
@@ -30,6 +36,9 @@
     "freq": "Weekly",
     "page": 20,
     "platform": "Online, Video, Print, Audio",
-    "other_media": "Video, Print, Audio, Online Text"
+    "other_media": "Video, Print, Audio, Online Text",
+    "audience": 8000,
+    "online_ad": "No",
+    "print_ad": "Yes"
   }
 ]

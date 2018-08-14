@@ -2,14 +2,15 @@ let temp_data = [];
 let organizations;
 d3.json("./data/data.json")
   .then(data => {
-          data.forEach(function(datum) {
+          data.forEach(datum => {
             temp_data.push(new Org(datum.name, datum.date, datum.type,
                                     datum.numStaff, datum.lang, datum.freq,
-                                    datum.page, datum.platform, datum.other_media));
+                                    datum.page, datum.platform, datum.other_media,
+                                    datum.audience, datum.online_ad, datum.print_ad));
           });
 
           organizations = crossfilter(temp_data);
-          
+
           /**
            * Organization chart
            */
@@ -64,16 +65,16 @@ d3.json("./data/data.json")
            */
 
           // This method maps the languages as a single array of unique values
-          const mapLanguages = (languageList) => {
-            let uniqueList = [];
-            for(var i = 0; i < languageList.length; i++) {
-              for(var j = 0; j < languageList[i].length; j++) {
-                !uniqueList.includes(languageList[i][j]) ? uniqueList.push(languageList[i][j]) : false;
-              }
-            }
-            return uniqueList;
-          }
-          const languages = mapLanguages([...new Set(organizations_data.map(item => item.lang))]);
+          // const mapLanguages = (languageList) => {
+          //   let uniqueList = [];
+          //   for(var i = 0; i < languageList.length; i++) {
+          //     for(var j = 0; j < languageList[i].length; j++) {
+          //       !uniqueList.includes(languageList[i][j]) ? uniqueList.push(languageList[i][j]) : false;
+          //     }
+          //   }
+          //   return uniqueList;
+          // }
+          // const languages = mapLanguages([...new Set(organizations_data.map(item => item.lang))]);
 
           var dimension_lang = organizations.dimension(item => item.lang, true);
           let group_lang = dimension_lang.group();
@@ -105,13 +106,13 @@ d3.json("./data/data.json")
            * Number of pages of publication
            */
 
-           let dimension_page = organizations.dimension(item => item.page);
-           let count_page = dimension_page.group();
+           let dimension_page = organizations.dimension(item => item.name);
+           let count_page = dimension_page.group().reduceSum(d => d.page);
 
            dc.rowChart('#row_page')
-              .width(500)
+              .width(600)
               .height(300)
-              .x(d3.scaleLinear().domain([0, 75]).range([0, 480]))
+              .x(d3.scaleBand())
               .elasticX(true)
               .dimension(dimension_page)
               .group(count_page)
@@ -121,17 +122,20 @@ d3.json("./data/data.json")
            * Number of staffs in an organization
            */
 
-          let dimension_numStaff = organizations.dimension(item => item.numStaff);
-          let count_numStaff = dimension_numStaff.group();
+          let dimension_numStaff = organizations.dimension(item => item.name);
+          let count_numStaff = dimension_numStaff.group().reduceSum(d => d.numStaff);
 
           dc.barChart('#bar_staff')
               .width(600)
               .height(300)
+              .x(d3.scaleBand())
+              .xUnits(dc.units.ordinal)
               .dimension(dimension_numStaff)
               .group(count_numStaff)
               .elasticY(true)
-              .centerBar(true)
-              .x(d3.scaleLinear().domain([0, 30]))
+              .barPadding(0.1)
+              // .centerBar(true)
+              // .x(d3.scaleLinear().domain([0, 30]))
               .render();
 
           /**
@@ -165,26 +169,62 @@ d3.json("./data/data.json")
               .render();
 
           /**
-           * Location
+           * Audiences per issue
            */
 
-          // let dimension_platform = organizations.dimension(item => item.platform, true);
-          // let group_platform = dimension_platform.group();
-          //
-          // dc.pieChart('#dough_platform')
-          //     .width(300)
-          //     .height(300)
-          //     .innerRadius(50)
-          //     .dimension(dimension_platform)
-          //     .group(group_platform)
-          //     .render();
+         let dimension_audience = organizations.dimension(item => item.name);
+         let group_audience = dimension_audience.group().reduceSum(d => d.audience);
+
+         dc.barChart('#bar_audience')
+            .width(600)
+            .height(400)
+            .margins({top: 10, right: 10, bottom: 20, left: 40})
+            .x(d3.scaleBand())
+            .xUnits(dc.units.ordinal)
+            .elasticY(true)
+            .dimension(dimension_audience)
+            .barPadding(0.1)
+            .group(group_audience)
+            .render();
+
+          /**
+           * Online Advertising
+           */
+
+          let dimension_online_ad = organizations.dimension(item => item.online_ad);
+          let group_online_ad = dimension_online_ad.group();
+
+          dc.pieChart('#dough_online_ad')
+              .width(300)
+              .height(300)
+              .innerRadius(50)
+              .dimension(dimension_online_ad)
+              .group(group_online_ad)
+              .render();
+
+          /**
+          * Print Advertising
+          */
+
+          let dimension_print_ad = organizations.dimension(item => item.print_ad);
+          let group_print_ad = dimension_print_ad.group();
+
+          dc.pieChart('#dough_print_ad')
+              .width(300)
+              .height(300)
+              .innerRadius(50)
+              .dimension(dimension_print_ad)
+              .group(group_print_ad)
+              .render();
 
         },
         () => console.log('Error'));
 
+
 function Org( name, date, type,
               numStaff, lang, freq,
-              page, platform, other_media) {
+              page, platform, other_media,
+              audience, online_ad, print_ad) {
   this.name = name;
   this.date = new Date(date);
   this.type = type;
@@ -194,43 +234,7 @@ function Org( name, date, type,
   this.page = page;
   this.platform = platform.split(',');
   this.other_media = other_media.split(',');
+  this.audience = audience;
+  this.online_ad = online_ad;
+  this.print_ad = print_ad;
 };
-
-let organizations_data =
-[
-  {
-    name: 'The Hakha Post',
-    type: 'private',
-    lang: ["Hakha"],
-    freq: '5 times a week',
-    page: 4,
-    date: new Date('2012-01'),
-    numStaff: 24,
-    platform: ['Online', 'Video', 'Print'],
-    other_media: ['Video', 'Print'],
-  },
-  {
-    name: 'Myitkyina News Journal',
-    type: 'private',
-    lang: ["Myanmar"],
-    freq: 'weekly',
-    page: 20,
-    date: new Date('2014-03'),
-    numStaff: 23,
-    platform: ['Online', 'Video', 'Audio', 'Print'],
-    other_media: ['Video', 'Audio', 'Print'],
-  },
-  {
-    name: 'The Voice of Shanni',
-    type: 'ngo',
-    lang: ["Myanmar", "Shanni"],
-    freq: 'monthly',
-    page: 40,
-    date: new Date('2014-07'),
-    numStaff: 15,
-    platform: ['Online', 'Video', 'Print'],
-    other_media: ['Video', 'Photo', 'Print', 'Online Text'],
-  }
-];
-
-// let organizations = crossfilter(organizations_data);

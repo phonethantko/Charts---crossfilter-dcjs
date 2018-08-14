@@ -1,4 +1,4 @@
-﻿name,date,type,numStaff,lang,freq,page,platform,other_media
-The Hakha Post,2012-01,Private,24,Hakha,5 times a week,4,"Online, Video, Print","Video, Print"
-Myitkyina News Journal ,2014-03,Private,23,Myanmar,Weekly,20,"Online, Video, Print, Audio","Video, Print, Audio"
-Mon News Agency ,2000-12,Non-profit,20,"Myanmar, English, Mon",Weekly,20,"Online, Video, Print, Audio","Video, Print, Audio, Online Text"
+﻿name,date,type,numStaff,lang,freq,page,platform,other_media,audience,online_ad,print_ad
+The Hakha Post,2012-01,Private,24,Hakha,5 times a week,4,"Online, Video, Print","Video, Print",4500,Yes,Yes
+Myitkyina News Journal ,2014-03,Private,23,Myanmar,Weekly,20,"Online, Video, Print, Audio","Video, Print, Audio",12000,Yes,Yes
+Mon News Agency ,2000-12,Non-profit,20,"Myanmar, English, Mon",Weekly,20,"Online, Video, Print, Audio","Video, Print, Audio, Online Text",8000,No,Yes
