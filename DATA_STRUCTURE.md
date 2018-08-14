@@ -13,3 +13,6 @@ Publication Information
 'page': Number of average pages per publication
 'platform': Content platforms
 'other_media': Content production for other media
+'audience': Estimated audience per issue
+'online_ad': Online advertising
+'print_ad': Print advertising

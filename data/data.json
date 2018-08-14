@@ -40,5 +40,33 @@
     "audience": 8000,
     "online_ad": "No",
     "print_ad": "Yes"
+  },
+  {
+    "name": "The Matupi Times",
+    "date": "2013-03",
+    "type": "Literacy",
+    "numStaff": 10,
+    "lang": "Matupi",
+    "freq": "Weekly",
+    "page": 4,
+    "platform": "Online, Print",
+    "other_media": "NA",
+    "audience": 3000,
+    "online_ad": "No",
+    "print_ad": "No"
+  },
+  {
+    "name": "The Voice of Shanni",
+    "date": "2017-07",
+    "type": "NGO",
+    "numStaff": 15,
+    "lang": "Myanmar, Shanni",
+    "freq": "Monthly",
+    "page": 40,
+    "platform": "Online, Video, Print",
+    "other_media": "Video, Photo, Print, Online Text",
+    "audience": 12500,
+    "online_ad": "Yes",
+    "print_ad": "Yes"
   }
 ]
