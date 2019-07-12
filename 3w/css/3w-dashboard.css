@@ -1,0 +1,60 @@
+h1, h2, h3, h4 {
+    color: #6e081a
+}
+#status {
+  width: 50%;
+}
+
+#status svg {
+  width: 350px;
+  height: 350px;
+}
+.dc-chart g.row text {
+    fill: #0e446a;
+    font-size: 12px;
+    cursor: pointer
+}
+.dc-chart .selected path {
+    stroke-width: 1;
+    stroke: #ccc;
+    fill-opacity: 1
+}
+.dc-chart .pie-slice {
+    fill: #0e446a
+}
+.logo {
+    height: 50px;
+    padding: 5px;
+    margin: 5px
+}
+
+div.tooltip {
+  color: #222;
+  background: #fff;
+  padding: .5em;
+  text-shadow: #f5f5f5 0 1px 0;
+  border-radius: 2px;
+  box-shadow: 0px 0px 2px 0px #a6a6a6;
+  opacity: 0.9;
+  position: absolute;
+}
+
+.button {
+  background-color: #3182bd;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+}
+
+.feedback{
+  padding-left:10px; padding-right:10px; padding-bottom:4px; padding-top:4px;
+}
+
+.dashboard{
+  display: block; width:1000px;
+}

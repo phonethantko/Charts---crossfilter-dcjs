@@ -1,0 +1,105 @@
+#map_cw svg {
+    width: 250px;
+    height: 600px
+}
+#map_ts svg, #map_cw svg {
+    width: 250px
+}
+#footer {
+    text-align: center
+}
+div#about_source10 {
+    clear: both
+}
+#status {
+    clear: both
+}
+.no-pad {
+    padding: 0
+}
+@media only screen and (max-width:479px) {
+    #orgs svg {
+        width: 250px
+    }
+}
+@media only screen and (max-width:560px) {
+    #technical svg, #sector svg, #orgs svg {
+        width: 250px
+    }
+    #status svg {
+        width: 250px
+    }
+}
+@media only screen and (max-width:620px) {
+    #about_source, #count-info {
+        width: 100%
+    }
+}
+@media only screen and (min-width:620px) and (max-width:1023px) {
+    div.css_sector, div.css_map_cw, div.css_map_ts {
+        width: 50%!important
+    }
+    div.css_map_ts {
+        margin-left: 0!important
+    }
+
+}
+@media only screen and (min-width:680px) and (max-width:960px) {
+    #sector, #status {
+        display: inline-block!important
+    }
+    #sector, #status, #map_cw, .css_map_ts {
+        display: inline-block!important;
+        width: auto!important
+    }
+    #map_cw, .css_map_ts {
+        width: auto!important;
+        display: inline-block
+    }
+}
+@media only screen and (max-width:619px) {
+    div.css_sector, div.css_map_cw, div.css_map_ts {
+        width: 100%!important
+    }
+    div.css_status {
+        position: relative!important;
+        float: none!important
+    }
+    div.css_map_ts {
+        margin-left: 0!important
+    }
+    #orgs svg, #sector svg {
+        width: 100%
+    }
+    #footer {
+        clear: both
+    }
+    div.css_orgs, div.css_orgtype, div.css_startyear, div.css_estimateendyear {
+        width: 50%!important
+    }
+}
+@media only screen and (min-width:561px) and (max-width:1100px) {
+    #technical svg {
+        width: 500px
+    }
+}
+@media only screen and (min-width:640px) and (max-width:768px) {
+    #map_cw, .css_map_ts {
+        display: inline-block!important;
+        width: auto!important
+    }
+}
+@media only screen and (max-width:960px) {
+    #latestdata {
+        float: none!important;
+        margin: 0!important
+    }
+}
+@media only screen and (max-width:1023px) {
+    .row {
+        margin: 0!important
+    }
+    div.css_orgs, div.css_orgtype, div.css_startyear, div.css_estimateendyear {
+        margin-top: 0!important
+    }
+}
